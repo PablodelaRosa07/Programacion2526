@@ -1,5 +1,6 @@
-n = int(input("Introduce un número:"))
-suma = sum(range(1, n))
-print("La suma es:", suma)
-if n <= 0:
+num = int(input("Introduce un número:"))
+for i in range (1, num+1):
+    suma = num +i
+    print("La suma es:", suma)
+if num <= 0:
     print("Fin")
