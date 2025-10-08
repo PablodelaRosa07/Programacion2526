@@ -1,5 +1,5 @@
 num = 11
-while num > 0 and num <12:
+while num != 1:
     num = num-1
     print(num)
 print("Fin")
