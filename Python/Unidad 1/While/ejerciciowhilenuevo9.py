@@ -1,7 +1,5 @@
-numero = int(input("Dame un número:"))
-div= 1
-while numero != 0:
-    div = div*10
-    numero = numero //div
-    resultadoResto = numero % div
-    print(resultadoResto)
+num = int(input("Introduce un número:"))
+while num != 0:
+    resto = num % 10
+    print(resto)
+    num = num//10
