@@ -1,6 +1,8 @@
 dia = float(input("Introduce el día:"))
 mes = float(input("Introduce el mes:"))
 hemis = float(input("Introduce en qué Hemisferio estás, norte (1), o sur (2):"))
+while hemis != 1 and hemis != 2:
+    hemis = float(input("Introduce correctamente en qué Hemisferio estás, norte (1), o sur (2):"))
 match hemis:
     case 1:
         match mes :
