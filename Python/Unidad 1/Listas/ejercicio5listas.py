@@ -2,7 +2,6 @@ import random
 listanum=[]
 listacuadrados=[]
 listacubos=[]
-suma=""
 for i in range (1,21):
     num = random.randint(0,100)
     listanum.append(num)
