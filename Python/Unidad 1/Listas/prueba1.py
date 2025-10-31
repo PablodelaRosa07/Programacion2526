@@ -12,3 +12,6 @@ if "Martes2" in diassemana:
     diassemana.index #Devuelve en qué posición está
 else:
     print("No está")
+
+mensaje="Hola Mundo"
+mensaje1=mensaje.find("Mundo") #Encontrar algo en una lista
