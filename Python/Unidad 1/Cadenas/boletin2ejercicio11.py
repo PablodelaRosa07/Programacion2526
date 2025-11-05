@@ -7,7 +7,6 @@ while i >= -lista2:
     i = i-4
 print(lista)
 salida = ""
-a = 0
 for valor in lista:
     salida = salida+valor
 print(salida)

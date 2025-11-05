@@ -43,11 +43,11 @@ while opcion != "S":
                 print("Ese juego no está en la lista")
         case "G":
             buscargenero=input("Introduce el género del juego:")
-            for buscargenero in genero:
-                if (genero==buscargenero) in nombre:
+            for i in range(len(genero)):
+                if genero[i] == buscargenero:
                     generojuego=genero.index(buscargenero)
-                    print(nombre[generojuego],"| Puntuación:",puntuacion[generojuego],"| Género:",genero[generojuego])
-                else:
-                    print("Ese género no está en la lista")
+                    print(nombre[i],"| Puntuación:",puntuacion[i],"| Género:",genero[i])
+                elif genero[i] != buscargenero:
+                    print("no")
         case "S":
             print("Saliendo del programa")
