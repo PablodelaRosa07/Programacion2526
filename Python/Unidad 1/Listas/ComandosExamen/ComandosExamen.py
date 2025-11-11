@@ -12,7 +12,7 @@ len(lista)  #Longitud de la lista
 lista.append()  #Añade un elemento al final de la lista
 lista.insert()  #Añade un elemento en la posición especificada, por ejemplo: lista.insert(0, 3), añade un 3 en la posición 0
 lista.remove()  #Borra un elemento de la lista, por ejemplo: lista.remove(3), borra el 3 de la lista
-lista.pop()  #Borrapor defecto el útimo elemento de la lista a menos que indiques la posición
+lista.pop()  #Borra por defecto el útimo elemento de la lista a menos que indiques la posición
 lista.reverse()  #Reversa el orden de la lista
 lista.sort()  #Ordena los elementos de menor a mayor
 print(lista.index(2))  #Devuelve en que posición está el primer 2

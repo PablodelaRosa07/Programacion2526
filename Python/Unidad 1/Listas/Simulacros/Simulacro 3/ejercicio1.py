@@ -1,5 +1,6 @@
 print("A. Introducir árboles")
 print("B. Resumen de datos guardados")
+print("F. Mostrar datos árbol más alto")
 print("E. Salir del programa")
 opcion= input("¿Qué desea hacer?:").upper()
 arbolesNombre=[]
@@ -12,7 +13,7 @@ alturaMax=[]
 alturaMin=[]
 edadMedia=0
 numArboles30=0
-while opcion == "A" or opcion == "B":
+while opcion != "E":
     if opcion == "A":
         numArboles = int(input("Introduce la cantidad de árboles que quieres introducir:"))
         for i in range (numArboles+1):
@@ -23,12 +24,11 @@ while opcion == "A" or opcion == "B":
             diamArbol= int(input("Introduce el diámetro del árbol en metros:"))
             arbolesDiam.append(arbolesTipo)
             altArbol = int(input("Introduce la altura del árbol en metros:"))
-            if altArbol[0] <= altArbol[1]:
-                alturaMax.insert(0, altArbol[1])
-                alturaMax.pop[-1]
-            elif altArbol[0] <= altArbol[1]:
-                alturaMin.insert(0, altArbol[0])
-                alturaMin.pop[1]
+            alturaMax.insert(0, altArbol)
+            arbolesAlt.append(altArbol)
+            if alturaMax < arbolesAlt[0]:
+                alturaMax.insert(0, altArbol)
+                alturaMax.pop(-1)
             arbolesAlt.append(altArbol)
             if arbolesAlt >= 30:
                 numArboles30=numArboles30+1
@@ -54,6 +54,17 @@ while opcion == "A" or opcion == "B":
         print("La altura mínima es:")
         print("La media de edad para los árboles de tipo B es",edadMedia,"años")
         print("Existen",numArboles30,"árboles en total de más de 30m")
+    if opcion == "F":
+        a=0
+        for i in arbolesAlt:
+            if i == alturaMax:
+                print(arbolesNombre[a],"| Tipo A:",arbolesTipo[a],"| Diámetro:",arbolesDiam[a],"| Altura:",arbolesAlt[a])
+            a = a+1
     opcion= input("¿Qué desea hacer?:").upper()
+    
+
+    
+
+
     
         
