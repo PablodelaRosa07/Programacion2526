@@ -1,8 +1,8 @@
-dineroMax = float(int(input("Introduce el dinero máximo en € que quieres gastar en la compra:")))
 dinero = 0
 total = 0
 listaProductos = []
 listaPrecios = []
+dineroMax = float(int(input("Introduce el dinero máximo en € que quieres gastar en la compra:")))
 while dinero < dineroMax:
     productos = input("Introduce el nombre del producto:").lower()
     precios = float(int(input("Introduce el precio del producto:")))
