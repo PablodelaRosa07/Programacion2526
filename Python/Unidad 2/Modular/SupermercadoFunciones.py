@@ -15,27 +15,26 @@ def listaProducto():
             listaPrecios.append(precios)
     for i in range (0, len(listaPrecios)):
         total = total+listaPrecios[i]
-    return total,dineroMax
-dineroMaximo=listaProducto()
-totalCuenta=listaProducto()
+    return total,dineroMax,listaProductos,listaPrecios
 
 #menu
-def menu():
-    print(f"Importe máximo a gastar: {dineroMaximo}")
-    print(f"Productos: {listaProductos}")
-    print(f"Precios: {listaPrecios}")
-    print(f"El coste total es de {totalCuenta}€")
+def menu(resultado,productos,precios,totalcuenta):
+    print(f"Importe máximo a gastar: {resultado}")
+    print(f"Productos: {productos}")
+    print(f"Precios: {precios}")
+    print(f"El coste total es de {totalcuenta}€")
 
     print("Pulse S para calcular dinero restante.")
     print("Pulse R para eliminar un producto y su precio de la lista.")
     print("Pulse C para devolver la lista de productos cuyo precio es más alto que un importe.")
+    return resultado,totalcuenta
 
 #opciones
-def opciones():
+def opciones(dineroMaximo,totalCuenta):
     opcion = input("¿Qué desea hacer?:").upper()
     while opcion == "S" or opcion == "R" or opcion == "C":
         if opcion == "S":
-            print(f"Dinero sobrante: {dineroMaximo-total}")
+            print(f"Dinero sobrante: {dineroMaximo-totalCuenta}")
 
         elif opcion == "R":
             a = 0
@@ -61,5 +60,12 @@ def opciones():
                 a = a+1
             print(f"La lista de precios con precio mayor al importe: {listaMayor}")
         opcion = input("¿Qué desea hacer?:").upper()
-
     print("Saliendo del programa")
+    return opcion,
+
+resultado=listaProducto()
+preciosMenu=menu()
+menu(resultado[1],resultado[2],resultado[3],resultado[0])
+
+opcionesDinero=opciones()
+opciones(preciosMenu[0],preciosMenu[1])
