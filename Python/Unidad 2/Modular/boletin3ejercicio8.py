@@ -8,7 +8,7 @@ def opciones():
     print ("b. Devuelve cuántos son pares")
     print ("c. Devuelve cuántos son negativos")
     print ("d. Devuelve la suma de todos los números introducidos")
-    opcion = input("¿Qué desea hacer?:").lower
+    opcion = input("¿Qué desea hacer?:").lower()
 
     return opcion,listaNum
 
@@ -35,9 +35,9 @@ def quehacer(opcion1,listaNum):
         suma = 0
         for i in range (0,len(listaNum)):
             suma = suma+listaNum[i]
-        print(f"La media es:{suma}")
+        print(f"La suma es:{suma}")
     
     return opcion1,listaNum
 
-hacer1 = opciones()
-hacer2 = quehacer(opciones)
+opciones1 = opciones()
+quehacer(opciones1[0],opciones1[1])
