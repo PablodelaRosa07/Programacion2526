@@ -14,9 +14,9 @@ def listas():
 def suma(suma):
     suma = 0
     for i in range (0,len(matriz)):
-        if i % 2 == 0:
-            for elemento in matriz[i]:
-                suma = suma+elemento
+        for a in range (0,len(matriz[i])):
+            if i % 2 == 0:
+                suma = suma+matriz[i][a]
     return suma
 
 lista = listas()
