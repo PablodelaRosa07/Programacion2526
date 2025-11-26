@@ -1,3 +1,5 @@
+#regular
+
 matriz = []
 
 def listas():
@@ -11,26 +13,38 @@ def listas():
         matriz.append(lista)
     return matriz
 
-def numeroMax(matriz): 
+def numeroMaxFila(matriz,numFila): 
+    listaFilaMax = getFila(matriz,numFila)
+    numMaximo = getMaximo(listaFilaMax)
+    return numMaximo
+
+def numeroMaxColumna(matriz,numColumna):
+    listaColumnaMax = getColumna(numColumna,matriz)
+    numMaximo = getMaximo(listaColumnaMax)
+
+    return numMaximo
+
+def getMaximo(listaNumeros,num):
     numero = 0
-    num = int(input("Introduce la fila:"))
-    for elemento in matriz[num]:
+    for elemento in listaNumeros[num]:
         if elemento > numero:
             numero = elemento
-    
+
     return numero
 
-def numeroMaxColumna(matriz):
-    numero = 0
+def getFila(matriz):
+    listaFilaMax = []
+    for i in range (len(matriz)):
+        listaFilaMax.append(matriz[i])
+
+    return listaFilaMax
+
+def getColumna(num,matriz):
     listaColumnaMax = []
-    num = int(input("Introduce la columna:"))
     for i in range (len(matriz)):
         listaColumnaMax.append(matriz[i][num])
-    for elemento in listaColumnaMax:
-        if elemento > numero:
-            numero = elemento
 
-    return numero
+    return listaColumnaMax
 
 def totalMatriz(matriz):
     suma = 0
@@ -43,9 +57,10 @@ def totalMatriz(matriz):
 
 
 resultado = listas()
-numeroMaximo = numeroMax(resultado)
+getFila(matriz)
+numeroMaximo = numeroMaxFila(getFila(matriz),resultado)
 columnaMayor = numeroMaxColumna(resultado)
 totalMatrizTodo = totalMatriz(resultado)
-print(numeroMaximo)
-print(columnaMayor)
-print(totalMatrizTodo)
+print(f"El número máximo de esa fila es: {numeroMaximo}")
+print(f"El número máximo de esa fila es: {columnaMayor}")
+print(f"La suma de la matriz es: {totalMatrizTodo}")

@@ -1,9 +1,11 @@
 matriz = []
 
-def lista():
-    for i in range (3):
+def lista(matriz):
+    numListas = int(input("¿Cuántas listas quieres tener?:"))
+    for i in range (0,numListas):
         lista = []
-        for i in range(3):
+        num = int(input("¿Cuántos números quieres meter en la lista?:"))
+        for i in range(num):
             numeroMeter = int(input("Introduce un número:"))
             lista.append(numeroMeter)
         matriz.append(lista)
@@ -18,6 +20,6 @@ def columna(matriz):
         suma = suma + elemento[columnas]
     return suma
 
-listas = lista()
+listas = lista(matriz)
 suma = columna(listas)
 print(f"La suma de las columnas es: {suma}")

@@ -22,6 +22,10 @@ def devuelveDiagonalSecundaria(matriz):
 
     return listaInversa
 
+
+for i in range (len(matriz)):
+    assert len(matriz) == len(matriz[i])
+
 diagonalPrincipal = devuelveDiagonalPrincipal(matriz)
 diagonalSecundaria = devuelveDiagonalSecundaria(matriz)
 print(diagonalPrincipal)
