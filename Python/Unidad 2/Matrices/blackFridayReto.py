@@ -36,12 +36,17 @@ def productoDestacado(ventas):
             
     return listaDestacados
 
-
+def tieneMayorIngreso(encontrado):
+    for i in range(0,2):
+        llamada = calcularIngresos()
+    assert encontrado[0] > encontrado[1]
 
 
 resultadoProducto = getProducto(ventas)
 print(resultadoProducto)
+
 resultadoIngresos = calcularIngresos(resultadoProducto)
-print(resultadoIngresos)
+print(f"Ingresos del producto: {resultadoIngresos}")
+
 resultadoDestacado = productoDestacado(ventas)
-print(resultadoDestacado)
+print(f"Productos destacados: {resultadoDestacado}")
