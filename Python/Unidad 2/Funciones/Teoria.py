@@ -21,3 +21,5 @@ def saludar (nomb,ed,prof):
 cadena2 = saludar ("A",20,profesion)
 print(cadena2[0])
 print(cadena2[0])
+
+assert cadena2 == 2, "Cadena deberia ser 2"
